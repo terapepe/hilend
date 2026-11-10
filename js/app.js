@@ -25,6 +25,7 @@
     $("footDesc").textContent = B.description;
     $("footCopy").textContent = `© ${new Date().getFullYear()} ${B.name}. All rights reserved.`;
     $("xTop").href = CFG.social.x;
+    $("tokenBtn").textContent = `${CFG.token.symbol} token`;
     $("footSocial").innerHTML = `<a href="${U.esc(CFG.social.x)}" target="_blank" rel="noopener">${U.icons.x} ${U.esc(CFG.social.xHandle)}</a>` +
       (CFG.social.telegram ? `<a href="${U.esc(CFG.social.telegram)}" target="_blank" rel="noopener">Telegram</a>` : "");
     $("footNets").innerHTML = nets.map((n) => `<a href="#/markets" data-action="set-chain" data-id="${n.id}">${U.netIcon(n.id)} ${U.esc(n.name)}</a>`).join("");
