@@ -1,0 +1,661 @@
+{
+ "generatedAt": "2026-11-10T12:00:00Z",
+ "note": "DEMO DATA \u2014 illustrative figures for UI preview. Replace with live protocol data once contracts are deployed.",
+ "chains": {
+  "ethereum": {
+   "assets": [
+    {
+     "symbol": "ETH",
+     "name": "Ether",
+     "cg": "ethereum",
+     "fallbackPrice": 3200,
+     "totalSupplied": 48200,
+     "totalBorrowed": 29100,
+     "supplyApy": 2.41,
+     "borrowApy": 3.62,
+     "ltv": 0.8,
+     "liqThreshold": 0.83,
+     "collateral": true
+    },
+    {
+     "symbol": "USDC",
+     "name": "USD Coin",
+     "cg": "usd-coin",
+     "fallbackPrice": 1,
+     "totalSupplied": 182400000,
+     "totalBorrowed": 141300000,
+     "supplyApy": 5.12,
+     "borrowApy": 6.48,
+     "ltv": 0.77,
+     "liqThreshold": 0.8,
+     "collateral": true
+    },
+    {
+     "symbol": "USDT",
+     "name": "Tether USD",
+     "cg": "tether",
+     "fallbackPrice": 1,
+     "totalSupplied": 121900000,
+     "totalBorrowed": 98200000,
+     "supplyApy": 5.64,
+     "borrowApy": 7.02,
+     "ltv": 0.75,
+     "liqThreshold": 0.78,
+     "collateral": true
+    },
+    {
+     "symbol": "WBTC",
+     "name": "Wrapped Bitcoin",
+     "cg": "wrapped-bitcoin",
+     "fallbackPrice": 95000,
+     "totalSupplied": 1420,
+     "totalBorrowed": 402,
+     "supplyApy": 0.38,
+     "borrowApy": 1.21,
+     "ltv": 0.73,
+     "liqThreshold": 0.78,
+     "collateral": true
+    },
+    {
+     "symbol": "stETH",
+     "name": "Lido Staked ETH",
+     "cg": "staked-ether",
+     "fallbackPrice": 3200,
+     "totalSupplied": 31800,
+     "totalBorrowed": 1200,
+     "supplyApy": 0.04,
+     "borrowApy": 0.92,
+     "ltv": 0.78,
+     "liqThreshold": 0.81,
+     "collateral": true
+    },
+    {
+     "symbol": "DAI",
+     "name": "Dai",
+     "cg": "dai",
+     "fallbackPrice": 1,
+     "totalSupplied": 64200000,
+     "totalBorrowed": 48900000,
+     "supplyApy": 4.86,
+     "borrowApy": 6.21,
+     "ltv": 0.75,
+     "liqThreshold": 0.78,
+     "collateral": true
+    }
+   ],
+   "tvlHistory": [
+    724610898.0,
+    717033251.0,
+    727463735.0,
+    717004126.0,
+    723309532.0,
+    723515275.0,
+    712590155.0,
+    717843218.0,
+    706267841.0,
+    708868519.0,
+    698584801.0,
+    689178812.0,
+    691402075.0,
+    707541201.0,
+    699185209.0,
+    694404144.0,
+    703689480.0,
+    724367710.0,
+    732230829.0,
+    733573758.0,
+    756177186.0,
+    744327235.0,
+    762878418.0,
+    760193440.0,
+    751993046.0,
+    742886119.0,
+    740972512.0,
+    757871367.0,
+    751078050.0,
+    759400000.0
+   ],
+   "users": 24935,
+   "volume24h": 28488770
+  },
+  "bsc": {
+   "assets": [
+    {
+     "symbol": "BNB",
+     "name": "BNB",
+     "cg": "binancecoin",
+     "fallbackPrice": 620,
+     "totalSupplied": 212000,
+     "totalBorrowed": 61500,
+     "supplyApy": 0.92,
+     "borrowApy": 2.48,
+     "ltv": 0.75,
+     "liqThreshold": 0.8,
+     "collateral": true
+    },
+    {
+     "symbol": "USDT",
+     "name": "Tether USD",
+     "cg": "tether",
+     "fallbackPrice": 1,
+     "totalSupplied": 96400000,
+     "totalBorrowed": 77100000,
+     "supplyApy": 6.12,
+     "borrowApy": 7.84,
+     "ltv": 0.75,
+     "liqThreshold": 0.8,
+     "collateral": true
+    },
+    {
+     "symbol": "USDC",
+     "name": "USD Coin",
+     "cg": "usd-coin",
+     "fallbackPrice": 1,
+     "totalSupplied": 41200000,
+     "totalBorrowed": 31800000,
+     "supplyApy": 5.48,
+     "borrowApy": 7.06,
+     "ltv": 0.75,
+     "liqThreshold": 0.8,
+     "collateral": true
+    },
+    {
+     "symbol": "BTCB",
+     "name": "Bitcoin BEP2",
+     "cg": "bitcoin",
+     "fallbackPrice": 95000,
+     "totalSupplied": 612,
+     "totalBorrowed": 168,
+     "supplyApy": 0.41,
+     "borrowApy": 1.36,
+     "ltv": 0.7,
+     "liqThreshold": 0.75,
+     "collateral": true
+    },
+    {
+     "symbol": "ETH",
+     "name": "Ether",
+     "cg": "ethereum",
+     "fallbackPrice": 3200,
+     "totalSupplied": 9800,
+     "totalBorrowed": 3100,
+     "supplyApy": 1.84,
+     "borrowApy": 3.12,
+     "ltv": 0.75,
+     "liqThreshold": 0.8,
+     "collateral": true
+    },
+    {
+     "symbol": "CAKE",
+     "name": "PancakeSwap",
+     "cg": "pancakeswap-token",
+     "fallbackPrice": 2.4,
+     "totalSupplied": 8400000,
+     "totalBorrowed": 1900000,
+     "supplyApy": 1.62,
+     "borrowApy": 4.88,
+     "ltv": 0.55,
+     "liqThreshold": 0.62,
+     "collateral": true
+    }
+   ],
+   "tvlHistory": [
+    308693844.0,
+    314128566.0,
+    317338462.0,
+    321448147.0,
+    323640656.0,
+    326419439.0,
+    333229018.0,
+    334988499.0,
+    344425818.0,
+    344453068.0,
+    342531478.0,
+    339444700.0,
+    346570147.0,
+    341750309.0,
+    340729316.0,
+    343031221.0,
+    342747803.0,
+    344270189.0,
+    348555647.0,
+    343557374.0,
+    346167256.0,
+    342791470.0,
+    342483914.0,
+    352300706.0,
+    353387524.0,
+    364024826.0,
+    358885168.0,
+    362439491.0,
+    370215525.0,
+    378700000.0
+   ],
+   "users": 15145,
+   "volume24h": 21893334
+  },
+  "robinhood": {
+   "assets": [
+    {
+     "symbol": "ETH",
+     "name": "Ether",
+     "cg": "ethereum",
+     "fallbackPrice": 3200,
+     "totalSupplied": 8600,
+     "totalBorrowed": 4900,
+     "supplyApy": 2.18,
+     "borrowApy": 3.41,
+     "ltv": 0.78,
+     "liqThreshold": 0.82,
+     "collateral": true
+    },
+    {
+     "symbol": "USDC",
+     "name": "USD Coin",
+     "cg": "usd-coin",
+     "fallbackPrice": 1,
+     "totalSupplied": 38600000,
+     "totalBorrowed": 30400000,
+     "supplyApy": 5.96,
+     "borrowApy": 7.42,
+     "ltv": 0.77,
+     "liqThreshold": 0.8,
+     "collateral": true
+    },
+    {
+     "symbol": "USDT",
+     "name": "Tether USD",
+     "cg": "tether",
+     "fallbackPrice": 1,
+     "totalSupplied": 19200000,
+     "totalBorrowed": 14900000,
+     "supplyApy": 5.74,
+     "borrowApy": 7.21,
+     "ltv": 0.75,
+     "liqThreshold": 0.78,
+     "collateral": true
+    },
+    {
+     "symbol": "WBTC",
+     "name": "Wrapped Bitcoin",
+     "cg": "wrapped-bitcoin",
+     "fallbackPrice": 95000,
+     "totalSupplied": 184,
+     "totalBorrowed": 51,
+     "supplyApy": 0.44,
+     "borrowApy": 1.42,
+     "ltv": 0.7,
+     "liqThreshold": 0.75,
+     "collateral": true
+    }
+   ],
+   "tvlHistory": [
+    84072039.0,
+    84996391.0,
+    85405246.0,
+    87454835.0,
+    90011494.0,
+    90525002.0,
+    91901671.0,
+    90526222.0,
+    92071921.0,
+    93393746.0,
+    96350106.0,
+    98575432.0,
+    98203780.0,
+    98330421.0,
+    99847919.0,
+    98163299.0,
+    98662436.0,
+    97715515.0,
+    96528740.0,
+    95075762.0,
+    97016416.0,
+    95897527.0,
+    95358653.0,
+    95506219.0,
+    97948418.0,
+    96579987.0,
+    97010674.0,
+    97929558.0,
+    100492295.0,
+    102800000.0
+   ],
+   "users": 22029,
+   "volume24h": 4228867
+  },
+  "base": {
+   "assets": [
+    {
+     "symbol": "ETH",
+     "name": "Ether",
+     "cg": "ethereum",
+     "fallbackPrice": 3200,
+     "totalSupplied": 26400,
+     "totalBorrowed": 16100,
+     "supplyApy": 2.32,
+     "borrowApy": 3.55,
+     "ltv": 0.8,
+     "liqThreshold": 0.83,
+     "collateral": true
+    },
+    {
+     "symbol": "USDC",
+     "name": "USD Coin",
+     "cg": "usd-coin",
+     "fallbackPrice": 1,
+     "totalSupplied": 118700000,
+     "totalBorrowed": 94600000,
+     "supplyApy": 6.04,
+     "borrowApy": 7.38,
+     "ltv": 0.77,
+     "liqThreshold": 0.8,
+     "collateral": true
+    },
+    {
+     "symbol": "cbBTC",
+     "name": "Coinbase Wrapped BTC",
+     "cg": "bitcoin",
+     "fallbackPrice": 95000,
+     "totalSupplied": 760,
+     "totalBorrowed": 214,
+     "supplyApy": 0.46,
+     "borrowApy": 1.48,
+     "ltv": 0.73,
+     "liqThreshold": 0.78,
+     "collateral": true
+    },
+    {
+     "symbol": "AERO",
+     "name": "Aerodrome",
+     "cg": "aerodrome-finance",
+     "fallbackPrice": 1.1,
+     "totalSupplied": 14200000,
+     "totalBorrowed": 3400000,
+     "supplyApy": 2.14,
+     "borrowApy": 6.92,
+     "ltv": 0.5,
+     "liqThreshold": 0.6,
+     "collateral": true
+    },
+    {
+     "symbol": "DAI",
+     "name": "Dai",
+     "cg": "dai",
+     "fallbackPrice": 1,
+     "totalSupplied": 12600000,
+     "totalBorrowed": 8900000,
+     "supplyApy": 4.71,
+     "borrowApy": 6.36,
+     "ltv": 0.75,
+     "liqThreshold": 0.78,
+     "collateral": true
+    }
+   ],
+   "tvlHistory": [
+    253242545.0,
+    253226985.0,
+    259863973.0,
+    267630414.0,
+    264832617.0,
+    262399041.0,
+    260719121.0,
+    259067935.0,
+    260686627.0,
+    263673098.0,
+    262390944.0,
+    257721613.0,
+    258481202.0,
+    258600796.0,
+    261268797.0,
+    269016696.0,
+    273462111.0,
+    275588162.0,
+    279137637.0,
+    283550804.0,
+    279212376.0,
+    286744592.0,
+    292765790.0,
+    300297383.0,
+    306871991.0,
+    307368800.0,
+    307967844.0,
+    304018727.0,
+    308188186.0,
+    303600000.0
+   ],
+   "users": 6206,
+   "volume24h": 21065803
+  },
+  "solana": {
+   "assets": [
+    {
+     "symbol": "SOL",
+     "name": "Solana",
+     "cg": "solana",
+     "fallbackPrice": 180,
+     "totalSupplied": 1840000,
+     "totalBorrowed": 712000,
+     "supplyApy": 1.86,
+     "borrowApy": 4.12,
+     "ltv": 0.75,
+     "liqThreshold": 0.8,
+     "collateral": true
+    },
+    {
+     "symbol": "USDC",
+     "name": "USD Coin",
+     "cg": "usd-coin",
+     "fallbackPrice": 1,
+     "totalSupplied": 104300000,
+     "totalBorrowed": 83700000,
+     "supplyApy": 6.22,
+     "borrowApy": 7.66,
+     "ltv": 0.8,
+     "liqThreshold": 0.85,
+     "collateral": true
+    },
+    {
+     "symbol": "USDT",
+     "name": "Tether USD",
+     "cg": "tether",
+     "fallbackPrice": 1,
+     "totalSupplied": 38900000,
+     "totalBorrowed": 30200000,
+     "supplyApy": 5.88,
+     "borrowApy": 7.31,
+     "ltv": 0.75,
+     "liqThreshold": 0.8,
+     "collateral": true
+    },
+    {
+     "symbol": "JitoSOL",
+     "name": "Jito Staked SOL",
+     "cg": "jito-staked-sol",
+     "fallbackPrice": 215,
+     "totalSupplied": 412000,
+     "totalBorrowed": 18400,
+     "supplyApy": 0.12,
+     "borrowApy": 1.04,
+     "ltv": 0.7,
+     "liqThreshold": 0.75,
+     "collateral": true
+    },
+    {
+     "symbol": "JUP",
+     "name": "Jupiter",
+     "cg": "jupiter-exchange-solana",
+     "fallbackPrice": 0.9,
+     "totalSupplied": 22400000,
+     "totalBorrowed": 4100000,
+     "supplyApy": 1.12,
+     "borrowApy": 5.94,
+     "ltv": 0.45,
+     "liqThreshold": 0.55,
+     "collateral": true
+    }
+   ],
+   "tvlHistory": [
+    472773658.0,
+    466862294.0,
+    472481617.0,
+    466395572.0,
+    471217720.0,
+    475379012.0,
+    489377706.0,
+    495586375.0,
+    488408192.0,
+    484695135.0,
+    485088449.0,
+    491744094.0,
+    506384989.0,
+    512519316.0,
+    515444557.0,
+    509139472.0,
+    512399698.0,
+    528228314.0,
+    531408119.0,
+    530128816.0,
+    524406538.0,
+    534623916.0,
+    544791159.0,
+    548022369.0,
+    557121095.0,
+    561475958.0,
+    557130555.0,
+    573622204.0,
+    573672466.0,
+    583140000.0
+   ],
+   "users": 4886,
+   "volume24h": 35178339
+  }
+ },
+ "staking": [
+  {
+   "id": "hilend",
+   "asset": "HILEND",
+   "name": "HILEND Single Stake",
+   "kind": "Protocol token",
+   "apr": 24.6,
+   "locks": [
+    {
+     "days": 0,
+     "boost": 1
+    },
+    {
+     "days": 30,
+     "boost": 1.25
+    },
+    {
+     "days": 90,
+     "boost": 1.6
+    },
+    {
+     "days": 180,
+     "boost": 2.2
+    }
+   ],
+   "totalStaked": 182400000,
+   "cg": null,
+   "chains": [
+    "solana",
+    "robinhood",
+    "base",
+    "bsc",
+    "ethereum"
+   ],
+   "desc": "Stake HILEND to earn a share of protocol revenue and boosted rewards."
+  },
+  {
+   "id": "eth",
+   "asset": "ETH",
+   "name": "ETH Liquid Staking",
+   "kind": "Native staking",
+   "apr": 3.4,
+   "locks": [
+    {
+     "days": 0,
+     "boost": 1
+    }
+   ],
+   "totalStaked": 64200,
+   "cg": "ethereum",
+   "chains": [
+    "ethereum",
+    "base",
+    "robinhood"
+   ],
+   "desc": "Earn validator rewards while keeping a liquid receipt token."
+  },
+  {
+   "id": "bnb",
+   "asset": "BNB",
+   "name": "BNB Staking",
+   "kind": "Native staking",
+   "apr": 2.8,
+   "locks": [
+    {
+     "days": 0,
+     "boost": 1
+    },
+    {
+     "days": 30,
+     "boost": 1.1
+    }
+   ],
+   "totalStaked": 148000,
+   "cg": "binancecoin",
+   "chains": [
+    "bsc"
+   ],
+   "desc": "Delegate BNB to curated validators through HILEND."
+  },
+  {
+   "id": "sol",
+   "asset": "SOL",
+   "name": "SOL Liquid Staking",
+   "kind": "Native staking",
+   "apr": 7.2,
+   "locks": [
+    {
+     "days": 0,
+     "boost": 1
+    }
+   ],
+   "totalStaked": 1120000,
+   "cg": "solana",
+   "chains": [
+    "solana"
+   ],
+   "desc": "MEV-boosted SOL staking with instant liquidity."
+  },
+  {
+   "id": "usdc",
+   "asset": "USDC",
+   "name": "USDC Stability Vault",
+   "kind": "Stable yield",
+   "apr": 8.4,
+   "locks": [
+    {
+     "days": 0,
+     "boost": 1
+    },
+    {
+     "days": 60,
+     "boost": 1.3
+    }
+   ],
+   "totalStaked": 72600000,
+   "cg": "usd-coin",
+   "chains": [
+    "ethereum",
+    "bsc",
+    "robinhood",
+    "base",
+    "solana"
+   ],
+   "desc": "Auto-compounding stablecoin yield from the safest lending markets."
+  }
+ ]
+}

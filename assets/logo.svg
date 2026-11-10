@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 64" role="img" aria-label="HILEND">
+  <defs>
+    <linearGradient id="hl-g" x1="6" y1="4" x2="58" y2="60" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#477BFF"/><stop offset="1" stop-color="#8855FF"/></linearGradient>
+    <linearGradient id="hl-t" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#C9D6FF"/></linearGradient>
+  </defs>
+  <path d="M32 3.5 56.7 17.8v28.4L32 60.5 7.3 46.2V17.8Z" fill="url(#hl-g)"/>
+  <g fill="#fff"><rect x="18" y="18" width="7" height="28" rx="3.5"/><rect x="39" y="18" width="7" height="28" rx="3.5"/></g>
+  <path d="M21.5 36c4-7 17-7 21 0" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="32" cy="31" r="3.2" fill="#0B1020"/><circle cx="32" cy="31" r="1.6" fill="#7EF0FF"/>
+  <text x="72" y="43" font-family="Sora, 'Segoe UI', Arial, sans-serif" font-weight="700" font-size="32" letter-spacing="3" fill="url(#hl-t)">HILEND</text>
+</svg>
