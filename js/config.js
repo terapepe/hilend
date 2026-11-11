@@ -12,7 +12,7 @@ window.HILEND_CONFIG = {
     symbol: "HIL",
     decimals: 18,
     totalSupply: "1000000000", // display only
-    address: "",
+    address: "0x84Cf8b107467116d49505535c0B5722fb0E80087",
     sol: "",
   },
 
