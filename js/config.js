@@ -30,21 +30,12 @@ window.HILEND_CONFIG = {
   announcement: "HILEND contract address launching soon",
 
   social: {
-    x: "https://x.com/hilendMulti",
-    xHandle: "@hilendMulti",
+    x: "https://x.com/hilend",
+    xHandle: "@Hilend",
     // telegram: "https://t.me/...", // optional — shown in footer if set
   },
-
-  /**
-   * Site mode
-   *  "single" → the whole site shows only `singleNetwork` (any key of `networks`),
-   *             the theme switches to that network's colors and copy.
-   *  "multi"  → token CA always shown on the 4 networks of `multiOrder`
-   *             (Solana, Robinhood, Base, BSC — Robinhood/Base/BSC share one CA),
-   *             lending markets cover every chain in `protocolChains`.
-   */
-  mode: "multi",
-  singleNetwork: "base",
+  mode: "single",
+  singleNetwork: "robinhood",
   multiOrder: ["solana", "robinhood", "base", "bsc"],
   protocolChains: ["ethereum", "bsc", "robinhood", "base", "solana"],
 
