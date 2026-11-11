@@ -1,9 +1,3 @@
-/* ==========================================================================
-   HILEND — site configuration.
-   Everything that may change later (token name/symbol, CA, networks,
-   single/multi mode, X account, contracts, data source) lives in this file.
-   Edit it directly on GitHub — no build step needed.
-   ========================================================================== */
 window.HILEND_CONFIG = {
   brand: {
     name: "HILEND",
@@ -13,14 +7,10 @@ window.HILEND_CONFIG = {
     logo: "assets/logo.svg",
     mark: "assets/logo-mark.svg",
   },
-
-  /** Project token. CA: `address` is shared by all EVM networks (Robinhood, Base, BSC, Ethereum),
-   *  `sol` is the Solana mint. A network can override with its own `ca` below.
-   *  Leave empty until launch — the site shows "CA coming soon". */
   token: {
     name: "HILEND",
     symbol: "HILEND",
-    decimals: 18,             // fallback; real value is read on-chain when CA is set
+    decimals: 18,
     totalSupply: "1000000000", // display only
     address: "",
     sol: "",
@@ -121,13 +111,6 @@ window.HILEND_CONFIG = {
     },
   },
 
-  /**
-   * Data source
-   *  "demo" → market figures from data/markets.json (illustrative, labelled DEMO in the UI).
-   *  "live" → backend at apiBase (same JSON shape as data/markets.json, endpoint /markets).
-   * Token prices are always fetched live from CoinGecko when livePrices = true.
-   * No transaction is ever sent while a network's contracts.pool / contracts.staking are empty.
-   */
   data: {
     mode: "demo",
     demoUrl: "data/markets.json",
