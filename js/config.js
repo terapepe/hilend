@@ -9,7 +9,7 @@ window.HILEND_CONFIG = {
   },
   token: {
     name: "HILEND",
-    symbol: "HILEND",
+    symbol: "HIL",
     decimals: 18,
     totalSupply: "1000000000", // display only
     address: "",
