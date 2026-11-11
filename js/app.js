@@ -44,7 +44,7 @@
     const w = Wallet.state, b = $("walletBtn");
     if (w.connected) {
       b.className = "btn btn-ghost"; b.dataset.action = "open-account";
-      b.innerHTML = `${w.network ? U.netIcon(w.network) : '<span class="down">⚠</span>'}<span class="mono">${U.short(w.address)}</span>`;
+      b.innerHTML = `${w.network ? U.netIcon(w.network) : '<span class="down">⚠</span>'}<span class="mono">${U.short(w.address)}</span>${w.tokenBalance != null ? `<span class="muted" style="font-size:12px">${U.num(w.tokenBalance, 2)} ${U.esc(CFG.token.symbol)}</span>` : ""}`;
     } else {
       b.className = "btn btn-primary"; b.dataset.action = "open-connect"; b.textContent = "Connect";
     }

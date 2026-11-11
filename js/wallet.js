@@ -9,7 +9,7 @@
   ];
 
   const W = {
-    state: { connected: false, type: null, network: null, address: null, provider: null, walletName: null, balance: null },
+    state: { connected: false, type: null, network: null, address: null, provider: null, walletName: null, balance: null, tokenBalance: null },
 
     init() {
       window.addEventListener("eip6963:announceProvider", (e) => {
@@ -87,7 +87,7 @@
 
     async disconnect() {
       if (W.state.type === "solana" && W.state.provider?.disconnect) { try { await W.state.provider.disconnect(); } catch {} }
-      W.state = { connected: false, type: null, network: null, address: null, provider: null, walletName: null, balance: null };
+      W.state = { connected: false, type: null, network: null, address: null, provider: null, walletName: null, balance: null, tokenBalance: null };
       try { localStorage.removeItem(KEY); } catch {}
       W.emit();
     },
@@ -103,8 +103,9 @@
 
     async refreshBalance() {
       const s = W.state;
-      if (!s.connected || !s.network) { s.balance = null; return; }
-      s.balance = await Chain.nativeBalance(s.network, s.address);
+      if (!s.connected || !s.network) { s.balance = null; s.tokenBalance = null; return; }
+      const [nat, tok] = await Promise.all([Chain.nativeBalance(s.network, s.address), Chain.tokenBalance(s.network, s.address)]);
+      s.balance = nat; s.tokenBalance = tok;
       W.emit();
     },
 

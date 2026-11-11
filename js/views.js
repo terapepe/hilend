@@ -70,6 +70,12 @@
     </table></div>`;
   }
 
+  /** Connected wallet's HILEND balance as text. */
+  function tokBalText(d = 2) {
+    const w = Wallet.state;
+    if (!w.network || !Chain.tokenAddress(w.network)) return "CA soon";
+    return w.tokenBalance != null ? U.num(w.tokenBalance, d) + " " + U.esc(T().symbol) : "…";
+  }
   function demoNote(text) {
     return `<div class="note">${I.info}<span>${text}</span></div>`;
   }
@@ -270,7 +276,7 @@
         <div class="glass card"><div class="card-h"><h3>Top supply APY</h3><a href="#/lend" class="muted" style="font-size:13px">Lend →</a></div>${miniList(topSupply, (a) => `<b class="up">${U.pct(a.supplyApy)}</b>`)}</div>
         <div class="glass card"><div class="card-h"><h3>Most borrowed</h3><a href="#/borrow" class="muted" style="font-size:13px">Borrow →</a></div>${miniList(topBorrow, (a) => `<b>${U.usd(a.borrowedUsd)}</b>`)}</div>
         <div class="glass card"><div class="card-h"><h3>Your position</h3></div>
-          ${w.connected ? `<div class="summary"><div><span>Wallet</span><b class="mono">${U.short(w.address)}</b></div><div><span>Network</span><b>${w.network ? U.esc(Chain.get(w.network).name) : "Unsupported"}</b></div><div><span>Balance</span><b>${w.balance != null ? U.num(w.balance, 4) + " " + Chain.get(w.network).nativeCurrency?.symbol : "—"}</b></div><div><span>Supplied / Borrowed</span><b>$0 / $0</b></div></div><a href="#/portfolio" class="btn btn-ghost btn-block">Open portfolio</a>`
+          ${w.connected ? `<div class="summary"><div><span>Wallet</span><b class="mono">${U.short(w.address)}</b></div><div><span>Network</span><b>${w.network ? U.esc(Chain.get(w.network).name) : "Unsupported"}</b></div><div><span>Balance</span><b>${w.balance != null ? U.num(w.balance, 4) + " " + Chain.get(w.network).nativeCurrency?.symbol : "—"}</b></div><div><span>${U.esc(T().name)}</span><b>${tokBalText()}</b></div><div><span>Supplied / Borrowed</span><b>$0 / $0</b></div></div><a href="#/portfolio" class="btn btn-ghost btn-block">Open portfolio</a>`
           : `<div class="empty" style="padding:20px 0"><div class="ico">${I.wallet}</div><h4>No wallet connected</h4><p style="margin-bottom:16px">Connect to see balances and positions.</p><button class="btn btn-primary" data-action="open-connect">Connect wallet</button></div>`}
         </div>
       </div>
@@ -313,6 +319,8 @@
     if (!p.locks[S.stake.lock]) S.stake.lock = 0;
     return `<div class="wrap page">
       <div class="page-h"><div><h1>Stake</h1><p>Stake assets to earn rewards. Longer locks earn a higher boost; flexible pools can be withdrawn any time.</p></div></div>
+      <div class="glass card" style="margin-bottom:22px"><div class="card-h"><h3>Your ${U.esc(T().name)} balance</h3>${Wallet.state.connected ? `<b class="grad-text" style="font-size:20px">${tokBalText(4)}</b>` : `<button class="btn btn-primary btn-sm" data-action="open-connect">Connect wallet</button>`}</div>
+        <div class="note">${I.info}<span>${U.esc(T().name)} token has just launched — the dev team is finishing the staking feature. Follow <a href="${U.esc(CFG.social.x)}" target="_blank" rel="noopener" class="grad-text">${U.esc(CFG.social.xHandle)}</a> for updates.</span></div></div>
       <div class="grid g-${Math.min(pools.length, 5) > 3 ? 4 : 3}" style="margin-bottom:22px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))">
         ${pools.map((x) => `<div class="glass pool ${x.id === p.id ? "on" : ""}" data-action="pick-pool" data-id="${x.id}">
           <div class="asset">${U.tok(x.asset)}<div><b>${U.esc(x.name)}</b><small>${U.esc(x.kind)}</small></div></div>
@@ -556,7 +564,8 @@
       <div><span>Address</span><b class="mono">${U.short(w.address)}</b></div>
       <div><span>Wallet</span><b>${U.esc(w.walletName || "")}</b></div>
       <div><span>Network</span><b>${w.network ? U.esc(Chain.get(w.network).name) : '<span class="down">Unsupported</span>'}</b></div>
-      <div><span>Balance</span><b>${w.balance != null ? U.num(w.balance, 6) + " " + (Chain.get(w.network)?.nativeCurrency?.symbol || "SOL") : "—"}</b></div></div>
+      <div><span>Balance</span><b>${w.balance != null ? U.num(w.balance, 6) + " " + (Chain.get(w.network)?.nativeCurrency?.symbol || "SOL") : "—"}</b></div>
+      <div><span>${U.esc(T().name)}</span><b>${tokBalText(4)}</b></div></div>
       <div class="grid g-2"><button class="btn btn-ghost" data-action="copy" data-v="${U.esc(w.address)}">${I.copy} Copy address</button><button class="btn btn-ghost" data-action="disconnect">Disconnect</button></div>`;
   }
 
