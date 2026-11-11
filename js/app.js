@@ -32,9 +32,11 @@
     $("netBadge").innerHTML = single
       ? `${U.netIcon(nets[0].id)}<span>${U.esc(nets[0].short)}</span>`
       : `<span style="display:flex">${nets.map((n, i) => `<img class="net-ico" style="margin-left:${i ? -7 : 0}px;border:2px solid var(--bg)" src="${n.icon}" alt="">`).join("")}</span><span>Multi-chain</span>`;
-    if (Data.isDemo()) {
+    const msg = (CFG.announcement || "").trim();
+    if (msg) {
+      const item = `<span class="ticker-item">${U.esc(msg)}</span>`;
       $("demoBar").hidden = false;
-      $("demoBar").innerHTML = `${U.icons.info}<span><b>Preview</b> — market & staking figures are demo data${CFG.data.livePrices ? "; token prices are live" : ""}. Contracts not deployed: no transactions are sent.</span>`;
+      $("demoBar").innerHTML = `<div class="ticker-track">${item.repeat(12)}</div>`;
     }
   }
 

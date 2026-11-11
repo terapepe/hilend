@@ -148,11 +148,15 @@ p { margin: 0; }
 .burger { display: none; }
 
 .demo-bar {
-  display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;
-  padding: 8px 16px; font-size: 12.5px; color: var(--amber); text-align: center;
-  background: linear-gradient(90deg, transparent, rgba(255,193,77,.08), transparent);
-  border-bottom: 1px solid rgba(255,193,77,.15);
+  overflow: hidden; white-space: nowrap; padding: 9px 0; font-size: 13px; font-weight: 600; letter-spacing: .02em;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--a1) 14%, transparent), color-mix(in srgb, var(--a2) 14%, transparent));
+  border-bottom: 1px solid var(--line);
 }
+.ticker-track { display: inline-flex; animation: ticker 40s linear infinite; }
+.demo-bar:hover .ticker-track { animation-play-state: paused; }
+.ticker-item { padding: 0 32px; display: inline-flex; align-items: center; gap: 32px; }
+.ticker-item::after { content: "◆"; color: var(--a1); font-size: 10px; }
+@keyframes ticker { to { transform: translateX(-50%); } }
 
 /* ---------- Layout ---------- */
 main { padding-bottom: 80px; min-height: 70vh; }

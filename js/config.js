@@ -26,6 +26,9 @@ window.HILEND_CONFIG = {
     sol: "",
   },
 
+  /** Scrolling announcement bar under the header. Set to "" to hide it. */
+  announcement: "HILEND contract address launching soon",
+
   social: {
     x: "https://x.com/hilendMulti",
     xHandle: "@hilendMulti",
