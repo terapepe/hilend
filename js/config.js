@@ -12,7 +12,7 @@ window.HILEND_CONFIG = {
     symbol: "HID",
     decimals: 18,
     totalSupply: "1000000000", // display only
-    address: "", //
+    address: "0xbD9Fb37c7cf46fbd45776e7D89B201e64A7fD101", //
     sol: "",
   },
 
@@ -25,7 +25,7 @@ window.HILEND_CONFIG = {
     // telegram: "https://t.me/...", // optional — shown in footer if set
   },
   mode: "single",
-  singleNetwork: "robinhood",
+  singleNetwork: "base",
   multiOrder: ["solana", "robinhood", "base", "bsc"],
   protocolChains: ["ethereum", "bsc", "robinhood", "base", "solana"],
 
