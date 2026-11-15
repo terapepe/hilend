@@ -9,7 +9,7 @@ window.HILEND_CONFIG = {
   },
   token: {
     name: "HILEND",
-    symbol: "HILD",
+    symbol: "HID",
     decimals: 18,
     totalSupply: "1000000000", // display only
     address: "", //
@@ -20,8 +20,8 @@ window.HILEND_CONFIG = {
   announcement: "HILEND contract address launching soon",
 
   social: {
-    x: "https://x.com/hilend",
-    xHandle: "@Hilend",
+    x: "https://x.com/TheHiLend",
+    xHandle: "@TheHiLend",
     // telegram: "https://t.me/...", // optional — shown in footer if set
   },
   mode: "single",
