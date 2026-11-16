@@ -12,11 +12,10 @@ window.HILEND_CONFIG = {
     symbol: "HID",
     decimals: 18,
     totalSupply: "1000000000", // display only
-    address: "0xbD9Fb37c7cf46fbd45776e7D89B201e64A7fD101", //
+    address: "", //
     sol: "",
   },
 
-  /** Scrolling announcement bar under the header. Set to "" to hide it. */
   announcement: "HILEND contract address launching soon",
 
   social: {
@@ -25,7 +24,7 @@ window.HILEND_CONFIG = {
     // telegram: "https://t.me/...", // optional — shown in footer if set
   },
   mode: "single",
-  singleNetwork: "base",
+  singleNetwork: "robinhood",
   multiOrder: ["solana", "robinhood", "base", "bsc"],
   protocolChains: ["ethereum", "bsc", "robinhood", "base", "solana"],
 
